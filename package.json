@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build:next": "next build",
+    "build:scripts": "esbuild scripts/init-db.ts --bundle --platform=node --target=node18 --format=esm --packages=external --outfile=scripts/init-db.mjs",
     "start": "next start",
     "lint": "next lint",
     "init-db": "tsx scripts/init-db.ts",
@@ -29,6 +30,7 @@
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.4",
     "@types/node": "20.5.0",
+    "esbuild": "^0.19.2",
     "prettier": "^3.0.1",
     "tsx": "^3.12.7"
   }
