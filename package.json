@@ -8,13 +8,16 @@
     "start": "next start",
     "lint": "next lint",
     "init-db": "tsx scripts/init-db.ts",
-    "format": "prettier --write '{pages,scripts,lib}/**/(*.ts|*.tsx)'"
+    "format": "prettier --write '{pages,scripts,lib,components}/**/(*.ts|*.tsx)'"
   },
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.15",
     "better-sqlite3": "^8.5.0",
+    "clsx": "^2.0.0",
     "next": "13.4.13",
     "pkg-dir": "^7.0.0",
     "postcss": "8.4.27",

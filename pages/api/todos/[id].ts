@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { ServerResponse, fail, json } from "./helpers";
 import { getTodoDatabase, type Todo } from "$/lib/data";
 
-type SingleTodoServerResponse = ServerResponse<Todo | undefined>;
+export type SingleTodoServerResponse = ServerResponse<Todo | undefined>;
 
 export default async function handler(
   req: NextApiRequest,

@@ -51,7 +51,7 @@ export class TodoDatabase {
     });
 
     if (res.changes !== 1) {
-      return undefined
+      return undefined;
     }
 
     return new_todo;

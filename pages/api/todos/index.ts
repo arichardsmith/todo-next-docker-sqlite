@@ -3,11 +3,11 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { ServerResponse, fail, json } from "./helpers";
 import { getTodoDatabase, type Todo } from "$/lib/data";
 
-type TodoServerResponse = ServerResponse<Todo[] | Todo>;
+export type TodoServerResponse = ServerResponse<Todo[] | Todo>;
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<TodoServerResponse>,
+  res: NextApiResponse<TodoServerResponse>
 ) {
   const response = await handleRequest(req);
 
