@@ -7,7 +7,7 @@ export type SingleTodoServerResponse = ServerResponse<Todo | undefined>;
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<SingleTodoServerResponse>
+  res: NextApiResponse<SingleTodoServerResponse>,
 ) {
   const response = await handleRequest(req);
 
@@ -15,7 +15,7 @@ export default async function handler(
 }
 
 async function handleRequest(
-  req: NextApiRequest
+  req: NextApiRequest,
 ): Promise<SingleTodoServerResponse> {
   const id = paramToNumber(req.query.id);
 
@@ -74,7 +74,7 @@ function paramToNumber(input: string | string[] | undefined): number {
 }
 
 function isValidTodoBody(
-  input: any
+  input: any,
 ): input is { title: string; complete: boolean } {
   return typeof input.title === "string" && typeof input.complete === "boolean";
 }

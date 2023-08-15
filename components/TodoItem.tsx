@@ -51,7 +51,7 @@ export function TodoItem({ todo, onDelete, onToggle, onEdit }: TodoItemProps) {
       className={clsx(
         "text-slate-900 px-3 py-2 focus-within:outline focus-within:outline-slate-900",
         "transition-opacity",
-        loading && "opacity-50"
+        loading && "opacity-50",
       )}
     >
       <form
@@ -89,7 +89,7 @@ function IconButon({ icon, onClick, type }: ButtonProps) {
       type={type}
       className={clsx(
         "py-1 px-2 text-slate-500 border-b border-b-transparent",
-        "focus:outline-none focus:border-b-slate-500"
+        "focus:outline-none focus:border-b-slate-500",
       )}
     >
       <FontAwesomeIcon icon={icon} />

@@ -4,11 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build:next": "next build",
-    "build:scripts": "esbuild scripts/init-db.ts --bundle --platform=node --target=node18 --format=esm --packages=external --outfile=scripts/init-db.mjs",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "init-db": "tsx scripts/init-db.ts",
     "format": "prettier --write '{pages,scripts,lib,components}/**/(*.ts|*.tsx)'"
   },
   "dependencies": {
@@ -19,6 +17,7 @@
     "autoprefixer": "10.4.15",
     "better-sqlite3": "^8.5.0",
     "clsx": "^2.0.0",
+    "dedent": "^1.5.1",
     "next": "13.4.13",
     "pkg-dir": "^7.0.0",
     "postcss": "8.4.27",

@@ -18,7 +18,7 @@ export function AddForm({ onCreate }: AddFormProps) {
     (e) => {
       setTitle(e.currentTarget.value);
     },
-    []
+    [],
   );
 
   const handle_submit: FormEventHandler = async (e) => {
@@ -49,7 +49,7 @@ export function AddForm({ onCreate }: AddFormProps) {
           className={clsx(
             "py-1 border-b border-transparent text-slate-900",
             "focus-visible:outline-none focus:border-slate-500",
-            loading && "text-slate-700 bg-transparent"
+            loading && "text-slate-700 bg-transparent",
           )}
         />
       </div>
@@ -58,7 +58,7 @@ export function AddForm({ onCreate }: AddFormProps) {
         className={clsx(
           "py-2 px-6 bg-slate-900 text-white",
           "focus-visible:outline-none group",
-          loading && "bg-slate-700"
+          loading && "bg-slate-700",
         )}
       >
         <span className="py-1 border-b border-transparent group-focus:border-slate-300">

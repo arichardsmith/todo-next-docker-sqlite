@@ -7,7 +7,7 @@ export type TodoServerResponse = ServerResponse<Todo[] | Todo>;
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<TodoServerResponse>
+  res: NextApiResponse<TodoServerResponse>,
 ) {
   const response = await handleRequest(req);
 
