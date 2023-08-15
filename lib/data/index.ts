@@ -18,11 +18,11 @@ export class TodoDatabase {
     this.db = db;
 
     this.create_statement = db.prepare(
-      "INSERT INTO todos (title, complete) VALUES (?, FALSE)",
+      "INSERT INTO todos (title, complete) VALUES (?, FALSE)"
     );
     this.get_statement = db.prepare("SELECT id, title, complete FROM todos");
     this.update_statement = db.prepare(
-      "UPDATE todos SET title = @title, complete = @complete WHERE id = @id",
+      "UPDATE todos SET title = @title, complete = @complete WHERE id = @id"
     );
     this.delete_statement = db.prepare("DELETE FROM todos WHERE id = ?");
   }
@@ -71,7 +71,6 @@ export class TodoDatabase {
 }
 
 function parseRow(input: any): Todo {
-  console.log({ input });
   return {
     id: typedInvariant(input.id, "id", "number"),
     title: typedInvariant(input.title, "title", "string"),
@@ -85,7 +84,7 @@ function typedInvariant(value: any, name: string, type: "boolean"): boolean;
 function typedInvariant(
   value: any,
   name: string,
-  type: "number" | "string" | "boolean",
+  type: "number" | "string" | "boolean"
 ) {
   const actual_type = typeof value;
 
@@ -114,7 +113,7 @@ let database_instance: TodoDatabase;
 export function getTodoDatabase(): TodoDatabase {
   if (database_instance === undefined) {
     database_instance = new TodoDatabase(
-      new Database(DB_PATH, { fileMustExist: true }),
+      new Database(DB_PATH, { fileMustExist: true })
     );
   }
 
